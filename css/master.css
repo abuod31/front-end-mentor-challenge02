@@ -1,0 +1,145 @@
+/*Start Variables */
+:root{
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+    --parag: hsla(0, 0%, 100%, 0.75);
+    --main-color: hsl(0, 0%, 95%);
+}
+
+/*End Variables */
+
+
+/* Start Global Rules */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 15px;
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--main-color);
+}
+
+@media (min-width: 768px) {
+    .container{
+        width: 750px
+    }
+    
+}
+
+@media (min-width: 992px) {
+    .container{
+        width: 970px
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    .container{
+        width: 1170px
+    }
+    
+}
+
+.container{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 40px auto;
+}
+
+/* End Global Rules */
+
+
+/* Start container */
+
+.container .card{
+    padding: 30px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.container .card:nth-child(1){
+    background-color: var(--orange);
+    border-radius: 10px 10px 0 0;
+}
+
+.container .card:nth-child(2){
+    background-color: var(--cyan);
+}
+
+.container .card:nth-child(3){
+    background-color: var(--dark-cyan);
+    border-radius: 0 0 10px 10px;
+}
+
+.container .card h1{
+    color: var(--main-color);
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+}
+
+.container .card p{
+    color: var(--parag);
+    font-size: 12px;
+    margin: 25px 20px 25px 0;
+    line-height: 1.7;
+}
+
+.container .card button{
+    padding: 15px 30px;
+    border-radius: 20px;
+    border: none;
+}
+
+.container .card:nth-child(1) > button{
+    color: var(--orange);
+}
+
+.container .card:nth-child(2) >  button{
+    color: var(--cyan);
+}
+
+.container .card:nth-child(3) >  button{
+    color: var(--dark-cyan);
+}
+
+.container .card button:hover{
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+
+}
+
+@media (min-width: 767px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+    }
+    
+
+    .container .card:nth-child(1){
+        border-radius: 10px 0 0 10px;
+    }
+
+    
+    .container .card:nth-child(3){
+        border-radius: 0 10px 10px 0 ;
+    }
+
+    .container .card button{
+        margin-top: 30px;
+    }
+
+}
+
+footer{
+    margin: 20px auto;
+}
+
+/* End container */
